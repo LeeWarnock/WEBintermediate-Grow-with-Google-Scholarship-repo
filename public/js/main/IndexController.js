@@ -13,6 +13,13 @@ export default function IndexController(container) {
 
 IndexController.prototype._registerServiceWorker = function() {
   // TODO: register service worker
+  navigator.serviceWorker.register('/sw.js').then(function(reg) {
+  // TODO: add scope here
+    scope: '/wittr/'
+    console.log('Service Worker has been registered.');
+  }).catch(function(err) {
+    console.log('SERVICE WORKER FAILED TO REGISTER!');
+  })
 };
 
 // open a connection to the server for live updates
