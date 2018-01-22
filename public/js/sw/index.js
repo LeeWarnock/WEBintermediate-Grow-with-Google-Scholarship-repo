@@ -1,3 +1,5 @@
 self.addEventListener('fetch', function(event) {
-  event.respondWith();
+  event.respondWith(
+    new Response('Hello <b></b>world')
+  );
 });
