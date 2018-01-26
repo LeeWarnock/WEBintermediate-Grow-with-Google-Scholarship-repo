@@ -4,11 +4,11 @@ self.addEventListener('fetch', function(event) {
 	// Ensure the Content-Type of the response is "text/html"
 
 	console.log("Caught a fetch!");
-	event.respondWith(
-		new Response("<h1 class="a-winner-is-me>HAYYY!</h1>", {
-			headers: {'Content-Type': 'text/html'}
-		})
-	)
 
-  console.log(event.request);
+	event.respondWith(
+    new Response("<i class='a-winner-is-me'>Hii</i>", {
+        headers: { 'Content-Type': 'text/html' }
+      }
+    )
+  );
 });
