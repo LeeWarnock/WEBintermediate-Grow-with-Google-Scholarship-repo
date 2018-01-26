@@ -3,7 +3,7 @@ self.addEventListener('fetch', function(event) {
 	// containing an element with class="a-winner-is-me".
 	// Ensure the Content-Type of the response is "text/html"
 
-	<p>Hey</p>
+	<p class="a-winner-is-me">Hey</p>
 
   console.log(event.request);
 });
