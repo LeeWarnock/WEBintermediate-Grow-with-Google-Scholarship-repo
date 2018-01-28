@@ -1,3 +1,5 @@
+var myIMG = fetch('/imgs/dr-evi');
+
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     fetch(event.request).then(function(response) {
