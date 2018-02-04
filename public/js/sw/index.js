@@ -1,5 +1,3 @@
-var myIMG = fetch('/imgs/dr-evi');
-
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     fetch(event.request).then(function(response) {
@@ -7,9 +5,8 @@ self.addEventListener('fetch', function(event) {
         // TODO: instead, respond with the gif at
         // /imgs/dr-evil.gif
         // using a network request
-        return myIMG;
+        return new Response("Whoops, not found");
       }
-
       return response;
     }).catch(function() {
       return new Response("Uh oh, that totally failed!");
